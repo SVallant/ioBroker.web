@@ -1,20 +1,52 @@
 {
-  "name": "iobroker.web",
-  "version": "5.2.10",
-  "description": "ioBroker simple web Adapter",
+  "_from": "iobroker.web@5.2.10",
+  "_id": "iobroker.web@5.2.10",
+  "_inBundle": false,
+  "_integrity": "sha512-Al8fV7hcXrHn/BcRzvDl2xocEvsu721BkA0I0Bqx7kdq6sbXy1ymsiOVtqXhlibf5jNmzNkQDHQpJgFqGg/9fw==",
+  "_location": "/iobroker.web",
+  "_phantomChildren": {
+    "@types/node": "8.9.1",
+    "array-flatten": "1.1.1",
+    "cookie-signature": "1.0.6",
+    "ee-first": "1.1.1",
+    "escape-html": "1.0.3",
+    "media-typer": "0.3.0",
+    "merge-descriptors": "1.0.1",
+    "methods": "1.1.2",
+    "passport-strategy": "1.0.0",
+    "path-to-regexp": "0.1.7",
+    "pause": "0.0.1",
+    "random-bytes": "1.0.0",
+    "safer-buffer": "2.1.2",
+    "side-channel": "1.0.4",
+    "unpipe": "1.0.0"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "iobroker.web@5.2.10",
+    "name": "iobroker.web",
+    "escapedName": "iobroker.web",
+    "rawSpec": "5.2.10",
+    "saveSpec": null,
+    "fetchSpec": "5.2.10"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/iobroker.web/-/iobroker.web-5.2.10.tgz",
+  "_shasum": "aec1bd2652c170d75e27516550fb627d0a38f622",
+  "_spec": "iobroker.web@5.2.10",
+  "_where": "/opt/iobroker",
   "author": {
     "name": "bluefox",
     "email": "dogafox@gmail.com"
   },
-  "homepage": "https://github.com/ioBroker/ioBroker.web",
-  "keywords": [
-    "ioBroker",
-    "web"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ioBroker/ioBroker.web"
+  "bugs": {
+    "url": "https://github.com/ioBroker/ioBroker.web/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "@iobroker/adapter-core": "^2.6.7",
     "body-parser": "^1.20.1",
@@ -24,13 +56,15 @@
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "iobroker.simple-api": "^2.7.1",
-    "iobroker.ws": "2.1.5",
     "iobroker.socketio": "6.1.10",
+    "iobroker.ws": "2.1.5",
     "mime-types": "^2.1.35",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "xtend": "^4.0.2"
   },
+  "deprecated": false,
+  "description": "ioBroker simple web Adapter",
   "devDependencies": {
     "@alcalzone/release-script": "^3.5.9",
     "@alcalzone/release-script-plugin-iobroker": "^3.5.9",
@@ -42,10 +76,6 @@
     "gulp": "^4.0.2",
     "mocha": "^10.0.0"
   },
-  "bugs": {
-    "url": "https://github.com/ioBroker/ioBroker.web/issues"
-  },
-  "main": "main.js",
   "files": [
     "admin/",
     "lib/",
@@ -54,20 +84,32 @@
     "LICENSE",
     "main.js"
   ],
-  "scripts": {
-    "test": "node node_modules/mocha/bin/mocha --exit",
-    "prepublishOnly": "node node_modules/gulp/bin/gulp.js",
-    "build": "node node_modules/gulp/bin/gulp.js",
-    "release": "release-script",
-    "release-patch": "release-script patch --yes",
-    "release-minor": "release-script minor --yes",
-    "release-major": "release-script major --yes"
-  },
+  "homepage": "https://github.com/ioBroker/ioBroker.web",
+  "keywords": [
+    "ioBroker",
+    "web"
+  ],
   "license": "MIT",
+  "main": "main.js",
   "maintainers": [
     {
       "name": "bluefox",
       "email": "dogafox@gmail.com"
     }
-  ]
+  ],
+  "name": "iobroker.web",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioBroker/ioBroker.web.git"
+  },
+  "scripts": {
+    "build": "node node_modules/gulp/bin/gulp.js",
+    "prepublishOnly": "node node_modules/gulp/bin/gulp.js",
+    "release": "release-script",
+    "release-major": "release-script major --yes",
+    "release-minor": "release-script minor --yes",
+    "release-patch": "release-script patch --yes",
+    "test": "node node_modules/mocha/bin/mocha --exit"
+  },
+  "version": "5.2.10"
 }

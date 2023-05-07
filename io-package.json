@@ -145,7 +145,8 @@
         "dsn": "https://3acf24332d994549bfa3b86e06062c21@sentry.iobroker.net/16"
       }
     },
-    "tier": 3
+    "tier": 3,
+    "installedFrom": "iobroker.web@5.2.10"
   },
   "native": {
     "port": 8082,
