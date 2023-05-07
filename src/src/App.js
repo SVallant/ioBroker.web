@@ -1,14 +1,12 @@
 import React from 'react';
 import { withStyles } from '@mui/styles';
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
-
 import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-
 import GenericApp from '@iobroker/adapter-react-v5/GenericApp';
-import { I18n, Loader, AdminConnection } from '@iobroker/adapter-react-v5';
-
+import Loader from '@iobroker/adapter-react-v5/Components/Loader'
+import I18n from '@iobroker/adapter-react-v5/i18n';
 import Options from './Tabs/Options';
 import Certificates from './Tabs/Certificates';
 import WhiteList from './Tabs/WhiteList';
@@ -27,12 +25,6 @@ const styles = theme => ({
         padding: 10,
         height: 'calc(100% - 64px - 48px - 20px - 38px)',
         overflow: 'auto'
-    },
-    selected: {
-        color: theme.palette.mode === 'dark' ? undefined : '#FFF !important',
-    },
-    indicator: {
-        backgroundColor: theme.palette.mode === 'dark' ? theme.palette.secondary.main : '#FFF',
     }
 });
 
@@ -62,18 +54,16 @@ class App extends GenericApp {
     constructor(props) {
         const extendedProps = { ...props };
         extendedProps.encryptedFields = ['pass'];
-        extendedProps.Connection = AdminConnection;
         extendedProps.translations = {
-            en: require('./i18n/en'),
-            de: require('./i18n/de'),
-            ru: require('./i18n/ru'),
-            pt: require('./i18n/pt'),
-            nl: require('./i18n/nl'),
-            fr: require('./i18n/fr'),
-            it: require('./i18n/it'),
-            es: require('./i18n/es'),
-            pl: require('./i18n/pl'),
-            uk: require('./i18n/uk'),
+            'en': require('./i18n/en'),
+            'de': require('./i18n/de'),
+            'ru': require('./i18n/ru'),
+            'pt': require('./i18n/pt'),
+            'nl': require('./i18n/nl'),
+            'fr': require('./i18n/fr'),
+            'it': require('./i18n/it'),
+            'es': require('./i18n/es'),
+            'pl': require('./i18n/pl'),
             'zh-cn': require('./i18n/zh-cn'),
         };
         extendedProps.sentryDSN = window.sentryDSN;
@@ -126,7 +116,7 @@ class App extends GenericApp {
                     instance={this.instance}
                     onChange={(attr, value, cb) => this.updateNativeValue(attr, value, cb)}
                     adapterName={this.adapterName}
-                    onLoad={native => this.setState({ native })}
+                    onLoad={native => this.setState({native})}
                 />;
 
             case 'certificates':
@@ -205,18 +195,11 @@ class App extends GenericApp {
                         <Tabs
                             value={this.getSelectedTab()}
                             onChange={(e, index) =>
-                                this.selectTab(arrayTabName.find(el => el.index === index)?.name || arrayTabName[0].name, index)}
+                                this.selectTab(arrayTabName.find((el) => el.index === index)?.name || arrayTabName[0].name, index)}
                             scrollButtons="auto"
-                            classes={{ indicator: this.props.classes.indicator }}
                         >
                             {arrayTabName.map((el, index) =>
-                                <Tab
-                                    key={`${index}-tab-key`}
-                                    classes={{ selected: this.props.classes.selected }}
-                                    disabled={this.checkDisabledTabs(el.name)}
-                                    label={I18n.t(el.translate)}
-                                    data-name={el.name}
-                                />)}
+                                <Tab key={`${index}-tab-key`} disabled={this.checkDisabledTabs(el.name)} label={I18n.t(el.translate)} data-name={el.name} />)}
                         </Tabs>
                     </AppBar>
                     <div className={this.isIFrame ? classes.tabContentIFrame : classes.tabContent}>

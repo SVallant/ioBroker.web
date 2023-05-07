@@ -1,7 +1,7 @@
 'use strict';
-// const expect  = require('chai').expect;
-const setup = require('@iobroker/legacy-testing');
-const tests = require('./lib/tests');
+//const expect  = require('chai').expect;
+const setup   = require('./lib/setup');
+const tests   = require('./lib/tests');
 
 let objects = null;
 let states  = null;
@@ -15,7 +15,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 function initTests() {
     for (const test in tests.tests) {
         if (tests.tests.hasOwnProperty(test)) {
-            it(`Test WEB(${(process.env.TEST_PROTOCOL === 'https') ? 'SSL' : 'NO SSL'}): ${test}`, tests.tests[test]);
+            it('Test WEB(' + ((process.env.TEST_PROTOCOL === 'https') ? 'SSL' : 'NO SSL') + '): ' + test, tests.tests[test]);
         }
     }
 }
@@ -23,11 +23,12 @@ function initTests() {
 function checkConnectionOfAdapter(cb, counter) {
     counter = counter || 0;
     if (counter > 20) {
-        return cb && cb('Cannot check connection');
+        cb && cb('Cannot check connection');
+        return;
     }
 
     states.getState('system.adapter.web.0.alive', (err, state) => {
-        err && console.error(err);
+        if (err) console.error(err);
         if (state && state.val) {
             cb && cb();
         } else {
@@ -36,12 +37,12 @@ function checkConnectionOfAdapter(cb, counter) {
     });
 }
 
-describe(`Test WEB(${(process.env.TEST_PROTOCOL === 'https') ? 'SSL' : 'NO SSL'})`, () => {
-    before(`Test WEB(${(process.env.TEST_PROTOCOL === 'https') ? 'SSL' : 'NO SSL'}): Start js-controller`, function (_done) {
+describe('Test WEB(' + ((process.env.TEST_PROTOCOL === 'https') ? 'SSL' : 'NO SSL') + ')', () => {
+    before('Test WEB(' + ((process.env.TEST_PROTOCOL === 'https') ? 'SSL' : 'NO SSL') + '): Start js-controller', function (_done) {
         this.timeout(600000); // because of first install from npm
         setup.adapterStarted = false;
 
-        setup.setupController(async () => {
+        setup.setupController(async function () {
             const config = await setup.getAdapterConfig();
             // enable adapter
             config.common.enabled  = true;
@@ -63,17 +64,17 @@ describe(`Test WEB(${(process.env.TEST_PROTOCOL === 'https') ? 'SSL' : 'NO SSL'}
         });
     });
 
-    it(`Test WEB(${(process.env.TEST_PROTOCOL === 'https') ? 'SSL' : 'NO SSL'}): Check if adapter started`, done => {
+    it('Test WEB(' + ((process.env.TEST_PROTOCOL === 'https') ? 'SSL' : 'NO SSL') + '): Check if adapter started', done => {
         checkConnectionOfAdapter(() => setTimeout(() => done(), 2000));
-    }).timeout(10000);
+    }).timeout(5000);
 
     initTests();
 
-    after(`Test WEB(${(process.env.TEST_PROTOCOL === 'https') ? 'SSL' : 'NO SSL'}): Stop js-controller`, function (done) {
+    after('Test WEB(' + ((process.env.TEST_PROTOCOL === 'https') ? 'SSL' : 'NO SSL') + '): Stop js-controller', function (done) {
         this.timeout(6000);
 
-        setup.stopController(normalTerminated => {
-            console.log(`Adapter normal terminated: ${normalTerminated}`);
+        setup.stopController(function (normalTerminated) {
+            console.log('Adapter normal terminated: ' + normalTerminated);
             setTimeout(done, 3000);
         });
     });

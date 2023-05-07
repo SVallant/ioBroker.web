@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 
 import { withStyles } from '@mui/styles';
 import { FormControl, FormHelperText, Input, MenuItem, Select } from '@mui/material';
 
-import { I18n, Utils, Icon } from '@iobroker/adapter-react-v5';
+import I18n from '@iobroker/adapter-react-v5/i18n';
+import Icon from '@iobroker/adapter-react-v5/Components/Icon';
+import Utils from '@iobroker/adapter-react-v5/Components/Utils';
 
 const styles = theme => ({
     input: {
@@ -22,7 +25,7 @@ const styles = theme => ({
 
 const CustomSelect = ({ table, value, title, attr, options, style, classes, native, onChange, className, noTranslate, themeType }) => {
     return <FormControl
-        className={Utils.clsx(classes.input, classes.controlElement, className)}
+        className={clsx(classes.input, classes.controlElement, className)}
         style={Object.assign({ paddingTop: 5 }, style)}
     >
         <Select

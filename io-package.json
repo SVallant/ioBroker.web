@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "web",
-    "version": "5.5.0",
+    "version": "5.2.10",
     "title": "WEB server",
     "titleLang": {
       "en": "WEB server",
@@ -16,96 +16,77 @@
       "zh-cn": "Web服务器"
     },
     "news": {
-      "5.5.0": {
-        "en": "Added special end-points for app authentication",
-        "de": "Zusätzliche spezielle Endpunkte für die App-Authentifizierung",
-        "ru": "Добавлены специальные конечные точки для аутентификации приложения",
-        "pt": "Adicionados pontos finais especiais para autenticação de aplicativos",
-        "nl": "Voeg speciale doelpunten toe voor authenticatie",
-        "fr": "Ajout de terminaux spéciaux pour l'authentification des applications",
-        "it": "Aggiunto punti finali speciali per l'autenticazione app",
-        "es": "Añadidos puntos finales especiales para la autenticación de aplicaciones",
-        "pl": "Dodany specjalny punkt końcowy dla autentyczności aplikacji",
-        "uk": "Додано спеціальні кінцеві точки для автентифікації додатка",
-        "zh-cn": "添加用于核证的特别最终用户"
+      "5.2.10": {
+        "en": "Corrected the certificate and IP selection\nPrepare for future js-controller versions",
+        "de": "Das Zertifikat und die IP-Auswahl korrigiert\nBereiten Sie sich auf zukünftige js-Controller-Versionen",
+        "ru": "Исправлен сертификат и выбор IP\nПодготовьтесь к будущим версиям js-controller",
+        "pt": "Corrigido o certificado e a seleção IP\nPrepare-se para futuras versões js-controller",
+        "nl": "Vertaling:\nBereid je voor op toekomstige Js-controller versie",
+        "fr": "Correction du certificat et de la sélection IP\nPréparez-vous pour les versions futures de js-controller",
+        "it": "Corretto il certificato e la selezione IP\nPrepararsi per le future versioni js-controller",
+        "es": "Corregido el certificado y selección IP\nPrepararse para futuras versiones js-controller",
+        "pl": "Wykwalifikowany certyfikat i wybór IP\nPrepare for future js-controller version",
+        "zh-cn": "修改证书和IP选择\n今后防污版本的编制"
       },
-      "5.4.3": {
-        "en": "Corrected error with `publishFileAll` (for future use)",
-        "de": "Fehler behoben mit Veröffentlichung FileAll (für zukünftige Nutzung)",
-        "ru": "Исправлена ошибка с публикацией FileAll (для будущего использования)",
-        "pt": "Erro corrigido com publicação FileAll (para uso futuro)",
-        "nl": "Gecorrigeerde fout. Vertaling:",
-        "fr": "Erreur corrigée avec publication FileAll (pour utilisation future)",
-        "it": "Errore corretto con pubblicazione FileAll (per uso futuro)",
-        "es": "Error corregido con publicación FileAll (para uso futuro)",
-        "pl": "Okazuje się, że błąd z opublikowaniem publikacji FileAll (ang.)",
-        "uk": "Виправлена помилка з опублікуванням ФайлВсі (для майбутнього використання)",
-        "zh-cn": "编辑错误 File All(今后使用)"
+      "5.2.7": {
+        "en": "Updated GUI packages",
+        "de": "Aktualisierte GUI-Pakete",
+        "ru": "Обновленные пакеты GUI",
+        "pt": "Pacotes de GUI atualizados",
+        "nl": "Update GUI pakketten",
+        "fr": "Paquets GUI mis à jour",
+        "it": "Pacchetti GUI aggiornati",
+        "es": "Paquetes GUI actualizados",
+        "pl": "Pakiet GUI",
+        "zh-cn": "A. 最新古伊一揽子计划"
       },
-      "5.4.1": {
-        "en": "Corrected GUI error",
-        "de": "Korrigierter GUI-Fehler",
-        "ru": "Исправлена ошибка GUI",
-        "pt": "Erro de GUI corrigido",
-        "nl": "Correctie GUI fout",
-        "fr": "Erreur GUI corrigée",
-        "it": "Errore GUI corretto",
-        "es": "Error de GUI corregido",
-        "pl": "Kwalifikacja błędów GUI",
-        "uk": "Виправлена помилка інтерфейсу",
-        "zh-cn": "更正"
+      "5.2.6": {
+        "en": "Caught error by subscribe",
+        "de": "Caught-Fehler durch abonnieren",
+        "ru": "Поймать ошибку по подписке",
+        "pt": "Erro capturado por assinatura",
+        "nl": "Kreeg fouten",
+        "fr": "Erreur coquine par abonné",
+        "it": "Errore catturato da sottoscrivere",
+        "es": "Error comprado por subscribirse",
+        "pl": "Caught error by a subscriber",
+        "zh-cn": "签 约的过失"
       },
-      "5.4.0": {
-        "en": "Used new version of socket classes",
-        "de": "Gebrauchte neue Version von Steckdosenklassen",
-        "ru": "Используется новая версия socket классов",
-        "pt": "Usada nova versão de classes de soquete",
-        "nl": "Gebruikte nieuwe versie van soketlessen",
-        "fr": "Nouvelle version utilisée des classes de socket",
-        "it": "Usato nuova versione di classi di socket",
-        "es": "Nueva versión utilizada de clases de socket",
-        "pl": "Używana jest nowa wersja klas gniazdowych",
-        "uk": "Використовується нова версія класу розетки",
-        "zh-cn": "使用新版的手工艺班"
+      "5.2.4": {
+        "en": "Corrected getAdapterInstances method",
+        "de": "Korrigierte getAdapterInstances Methode",
+        "ru": "Правильный метод getAdapterInstances",
+        "pt": "Método correto getAdapterInstâncias",
+        "nl": "Vertaling:",
+        "fr": "Méthode d'admission corrigée",
+        "it": "Corretto getAdapterInstances metodo",
+        "es": "Método corregido getAdapterInstances",
+        "pl": "Poprawiona metoda gotowania AdapterInstance",
+        "zh-cn": "改用阿达佩特文法"
       },
-      "5.3.1": {
-        "en": "Added `fileChange` event",
-        "de": "Datei hinzufügen Event ändern",
-        "ru": "Добавлен файл Изменить событие",
-        "pt": "Adicionado arquivo Evento de mudança",
-        "nl": "Vervoegd dossier Veranderingsevenement",
-        "fr": "Fichier ajouté Changement d ' événement",
-        "it": "Aggiunto il file Cambia evento",
-        "es": "Añadido el archivo Cambio de evento",
-        "pl": "Added file Zmiana",
-        "uk": "Додано файл Зміна події",
-        "zh-cn": "增加档案 变革活动"
+      "5.2.3": {
+        "en": "Allowed to overload the system language",
+        "de": "Erlaubt, die Systemsprache zu überlasten",
+        "ru": "Разрешено перегрузить язык системы",
+        "pt": "Permitido sobrecarregar a linguagem do sistema",
+        "nl": "Genoemd om de systeemtaal te overbelasten",
+        "fr": "Permet de surcharger la langue du système",
+        "it": "Consentito di sovraccaricare la lingua di sistema",
+        "es": "Permitido sobrecargar el lenguaje del sistema",
+        "pl": "Wszystko to było przeciążenie języka systemowego",
+        "zh-cn": "允许使用系统语文"
       },
-      "5.3.0": {
-        "en": "Added `fileChange` event",
-        "de": "Datei hinzufügen Event ändern",
-        "ru": "Добавлен файл Изменить событие",
-        "pt": "Adicionado arquivo Evento de mudança",
-        "nl": "Vervoegd dossier Veranderingsevenement",
-        "fr": "Fichier ajouté Changement d ' événement",
-        "it": "Aggiunto il file Cambia evento",
-        "es": "Añadido el archivo Cambio de evento",
-        "pl": "Added file Zmiana",
-        "uk": "Додано файл Зміна події",
-        "zh-cn": "增加档案 变革活动"
-      },
-      "5.2.12": {
-        "en": "corrected read of binary states",
-        "de": "korrigiertes lesen von binären zuständen",
-        "ru": "исправлено чтение бинарных государств",
-        "pt": "leitura corrigida de estados binários",
-        "nl": "vertaling:",
-        "fr": "correction de la lecture des états binaires",
-        "it": "lettura corretta degli stati binari",
-        "es": "corregido leído de estados binarios",
-        "pl": "poprawiony odczyt stanów binarnych",
-        "uk": "виправлено читання бінарних штатів",
-        "zh-cn": "更正"
+      "5.2.2": {
+        "en": "Added Cache headers to all static with configurable cache time (default 60s)",
+        "de": "Cache-Header zu allen statischen mit konfigurierbaren Cache-Zeit (Standard 60s) hinzugefügt",
+        "ru": "Добавлены заголовки Cache ко всем статическим с конфигурируемым временем кэша (по умолчанию 60s)",
+        "pt": "Cabeçalhos Cache adicionados a todos estáticos com tempo de cache configurável (padrão 60s)",
+        "nl": "Voegde Cache kopers toe aan alle statistieken met configurable cache time (default 60s)",
+        "fr": "Ajout des en-têtes de Cache à tous les statiques avec le temps de cache configurable (par défaut 60s)",
+        "it": "Aggiunta di intestazioni Cache a tutte le statiche con tempo di cache configurabile (default 60s)",
+        "es": "Cabeceras de caché agregadas a todas las estáticas con tiempo de caché configurable (por defecto 60s)",
+        "pl": "Added Cache kieruje wszystkimi statycznymi konfigurowalnym czasem pamięci (default 60s)",
+        "zh-cn": "增加所有静态的头寸,时间暗淡(60人)"
       }
     },
     "desc": {

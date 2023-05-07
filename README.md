@@ -82,27 +82,6 @@ the path could be provided here (e.g. `/vis/`) so this path will be opened autom
 -->
 
 ## Changelog
-### 5.5.0 (2023-02-15)
-* (bluefox) Added special end-points for app authentication
-
-### 5.4.3 (2023-01-29)
-* (bluefox) Corrected error with `publishFileAll` (for future use)
-
-### 5.4.1 (2022-12-23)
-* (bluefox) Corrected GUI error
-
-### 5.4.0 (2022-12-22)
-* (bluefox) Used new version of socket classes
-
-### 5.3.1 (2022-11-27)
-* (bluefox) Added `fileChange` event
-
-### 5.2.12 (2022-11-18)
-* (bluefox) corrected read of binary states
-
-### 5.2.11 (2022-11-08)
-* (bluefox) Function `getObjects` was extended by devices, channels and enums
-
 ### 5.2.10 (2022-10-10)
 * (bluefox) Corrected the certificate and IP selection
 * (Apollon77) Prepare for future js-controller versions
@@ -580,7 +559,7 @@ the path could be provided here (e.g. `/vis/`) so this path will be opened autom
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2014-2023 Bluefox <dogafox@gmail.com>
+Copyright (c) 2014-2022 Bluefox <dogafox@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

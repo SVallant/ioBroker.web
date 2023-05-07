@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 
 import { withStyles } from '@mui/styles';
 import { FormControl, FormHelperText, TextField } from '@mui/material';
 
-import { I18n, Utils } from '@iobroker/adapter-react-v5';
+import I18n from '@iobroker/adapter-react-v5/i18n';
 
 const styles = theme => ({
     input: {
@@ -21,7 +22,7 @@ const styles = theme => ({
 const CustomInput = ({ styleComponentBlock, component, size, variant, table, value, title, attr, type, style, classes, native, onChange, className }) => {
     const error = false;
     return <FormControl
-        className={Utils.clsx(type === 'number' ? classes.inputNumber : classes.input + ' ' + classes.controlElement, className)}
+        className={clsx(type === 'number' ? classes.inputNumber : classes.input + ' ' + classes.controlElement, className)}
         style={Object.assign({ paddingTop: 5 }, style)}
     >
         <TextField
